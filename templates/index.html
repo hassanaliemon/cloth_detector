@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloth Detector</title>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form action="/detect/" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <br><br>
+        <button type="submit">Detect Clothing</button>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    {% if image %}
+        <h2>Detected Image:</h2>
+        <img src="{{ image }}" alt="Cloth Detected">
+    {% endif %}
+    <p><a href="/">Go back to the homepage</a></p>
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
+    
+</body>
+</html>
