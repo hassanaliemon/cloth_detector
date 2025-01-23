@@ -24,7 +24,7 @@ I have annotated a total of `87` images for the model of which `76` for train an
 Overall the model achived map 0.995 on IoU 0.5 (around) on the data when used augmentation like
 - flip up down
 - flip left right
-- increase/decrease brightness(value)
+- increase/decrease brightness(value of HSV)
 
 
 ## Limitation
